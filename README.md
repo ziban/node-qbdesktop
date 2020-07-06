@@ -1,4 +1,4 @@
-quickbooks-js
+node-qbdesktop
 ======
 A SOAP service implemented in Node.js that communicates with [QuickBook's Web Connector](https://developer.intuit.com/docs/0200_quickbooks_desktop/0400_tools/web_connector).
 
@@ -19,7 +19,7 @@ You must provide your own `qbXMLHandler` file that will:
 4. Provide company file. If empty, it will use the open company file in QB Desktop. 
 5. Port to connect to. Defaults to 8080
 
-There is an [example handler here](https://github.com/ziban/quickbooks-js/blob/master/bin/qbXMLHandler/index.js). Setup below shows how to use it.
+There is an [example handler here](https://github.com/ziban/node-qbdesktop/blob/master/bin/qbXMLHandler/index.js). Setup below shows how to use it.
 
 ```javascript
 // Public
@@ -80,15 +80,15 @@ node bin/run or npm start
 
 To install the app: 
 ```
-npm install git@github.com:ziban/quickbooks-js.git --save  
+npm install git@github.com:ziban/node-qbdesktop.git --save  
 ```
 or 
 ```
-npm install https://github.com/ziban/quickbooks-js.git --save  
+npm install https://github.com/ziban/node-qbdesktop.git --save  
 ```
 To import into your node project: 
 ```
-const Server = require('quickbooks-js');  
+const Server = require('node-qbdesktop');  
 const qbXMLHandler = require('./qbXMLHandler');
 const soapServer = new Server();
 soapServer.setQBXMLHandler(qbXMLHandler);
@@ -97,7 +97,7 @@ soapServer.run();
 ### QBWC Setup
 1. Login to your Quickbooks Company with your `admin` user.
 2. Download Quickbooks Web Connector
-3. In the Quickbooks Web Connector, select "Add an Application" and supply it with a `.qwc` file. There is an example [here](https://github.com/ziban/quickbooks-js/blob/master/test/app.qwc). 
+3. In the Quickbooks Web Connector, select "Add an Application" and supply it with a `.qwc` file. There is an example [here](https://github.com/ziban/node-qbdesktop/blob/master/test/app.qwc). 
     * You may need to use `0.0.0.0` or a local IP like `10.0.0.156` to run locally
     * `<OwnerID>` and `<FileID>`can be any random `guid`
     * UserName should be the one you will use to authenticate against in the qbXMLHandler
