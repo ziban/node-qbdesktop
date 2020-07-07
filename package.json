@@ -1,14 +1,14 @@
 {
-  "name": "quickbooks-js",
+  "name": "node-qbdesktop",
   "version": "1.0.0",
-  "author": "Rappid Development LLC",
+  "author": "Ziban",
   "description": "A SOAP service implemented in Node.js that communicates with QuickBook's Web Connector",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RappidDevelopment/quickbooks-js"
+    "url": "https://github.com/ziban/node-qbdesktop"
   },
   "bugs": {
-    "url": "https://github.com/RappidDevelopment/quickbooks-js/issues"
+    "url": "https://github.com/ziban/node-qbdesktop"
   },
   "scripts": {
     "test": "mocha",
@@ -19,6 +19,7 @@
   "keywords": [
     "qbwc",
     "QuickBooks",
+    "node QuickBooks Desktop",
     "QuickBooks Web Connector"
   ],
   "license": "MIT",
